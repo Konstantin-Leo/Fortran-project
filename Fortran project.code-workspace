@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			
+			{
+				"type": "by-gdb",
+				"request": "launch",
+				"name": "Launch(gdb)",
+				"program": "${fileBasenameNoExtension}",
+				"cwd": "${workspaceRoot}"
+			}
+		]
+	},
+	"settings": {
+		"fortran.linter.compilerPath": "C:\\Program Files\\gcc\\bin\\",
+		"fortran.fortls.path": "\"C:/Users/klgno/AppData/Roaming/Python/Python312/site-packages/fortls\"",
+		"fortran.fortls.disabled": true
+	}
+}

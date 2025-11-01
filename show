@@ -1,0 +1,123 @@
+[33mcommit b5064d5cdb32629be016386bb18da12a0460a6e5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: KL <kl.gnomonic@gmail.com>
+Date:   Thu Feb 22 02:53:32 2024 +0300
+
+    Add from VSC
+
+[1mdiff --git a/.vscode/launch.json b/.vscode/launch.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c755af2[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/launch.json[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.[m
+[32m+[m[32m    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.[m
+[32m+[m[32m    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387[m
+[32m+[m[32m    "version": "0.2.0",[m
+[32m+[m[32m    "configurations": [[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "type": "by-gdb",[m
+[32m+[m[32m            "request": "launch",[m
+[32m+[m[32m            "name": "Launch(gdb)",[m
+[32m+[m[32m            "program": "${fileBasenameNoExtension}",[m
+[32m+[m[32m            "cwd": "${workspaceRoot}"[m
+[32m+[m[32m        }[m
+[32m+[m[32m    ][m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/.vscode/settings.json b/.vscode/settings.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0d6b9eb[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/settings.json[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "editor.codeActionsOnSave": {},[m
+[32m+[m[32m    "editor.language.brackets": [][m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/homework_10.f08 b/homework_10.f08[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8bfdfd6[m
+[1m--- /dev/null[m
+[1m+++ b/homework_10.f08[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32mprogram hw_10[m
+[32m+[m[32mimplicit none[m
+[32m+[m[32minteger:: n, i, j, accup, accdw[m
+[32m+[m[32mwrite (*,*) 'Input N:'[m
+[32m+[m[32mread (*,*) n[m
+[32m+[m[32maccup=0[m
+[32m+[m[32maccdw=n[m
+[32m+[m[32mdo i=1,n[m
+[32m+[m[32m    do j=1,n[m
+[32m+[m[32m        write(*,'(A)',advance='NO')'*'[m
+[32m+[m
+[32m+[m
+[32m+[m[32mend do[m
+[32m+[m
+[32m+[m[32mend program hw_10[m
+[1mdiff --git a/homework_8.f08 b/homework_8.f08[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dd22c6b[m
+[1m--- /dev/null[m
+[1m+++ b/homework_8.f08[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mprogram hw_8[m
+[32m+[m[32mimplicit none[m
+[32m+[m[32minteger:: n,i, factorial[m
+[32m+[m[32mwrite (*,*) 'Input N (4...10)'[m
+[32m+[m[32mread (*,*) n[m
+[32m+[m[32mif (n<4 .or. n>10) then[m
+[32m+[m[32m    write (*,*) 'N is out of range'[m
+[32m+[m[32m    goto 13[m
+[32m+[m[32mend if[m
+[32m+[m[32mfactorial=6[m
+[32m+[m[32mdo i=4,n[m
+[32m+[m[32m    factorial=factorial*i[m
+[32m+[m[32mend do[m
+[32m+[m[32mwrite (*,*) 'N factorial =', factorial[m
+[32m+[m
+[32m+[m[32m13 end program hw_8[m
+[1mdiff --git a/homework_9.f08 b/homework_9.f08[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0e0e2a6[m
+[1m--- /dev/null[m
+[1m+++ b/homework_9.f08[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32mprogram hw_9[m
+[32m+[m[32mimplicit none[m
+[32m+[m[32minteger:: i, n, j[m
+[32m+[m[32mwrite (*,*) 'Input N:'[m
+[32m+[m[32mread (*,*) n[m
+[32m+[m[32mdo i=1,2*n-1[m[41m    [m
+[32m+[m[32m    if (i.le.n) then[m
+[32m+[m[32m        do j=1,i[m[41m        [m
+[32m+[m[32m            write(*,'(A)',advance='NO')'*'[m
+[32m+[m[32m        end do[m
+[32m+[m[32m    end if[m
+[32m+[m[32m    if (i.gt.n) then[m
+[32m+[m[32m        do j=n-1,i-n,-1[m[41m      [m
+[32m+[m[32m            write(*,'(A)',advance='NO')'*'[m
+[32m+[m[32m        end do[m
+[32m+[m[32m    end if[m
+[32m+[m[32mwrite(*,*)''[m
+[32m+[m[32mend do[m
+[32m+[m[32mend program hw_9[m
+[1mdiff --git a/second_sample.f08 b/second_sample.f08[m
+[1mnew file mode 100644[m
+[1mindex 0000000..35ebfdd[m
+[1m--- /dev/null[m
+[1m+++ b/second_sample.f08[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32mprogram sec_sample[m
+[32m+[m[32mimplicit none[m
+[32m+[m[32m!integer: i[m
+[32m+[m[32mcharacter:: w[m
+[32m+[m[32mwrite (*,*) 'Input message'[m
+[32m+[m[32mread (*,*) w[m
+[32m+[m[32mprint *, w[m
+[32m+[m[32mread (*,*)[m
+[32m+[m[41m    [m
+[32m+[m[32mend program sec_sample[m
