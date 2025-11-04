@@ -1,4 +1,8 @@
 {
     "editor.codeActionsOnSave": {},
-    "editor.language.brackets": []
+    "editor.language.brackets": [],
+    "python.terminal.focusAfterLaunch": true,
+    "fortran-ls.executablePath": "C:\\Users\\klgno\\AppData\\Roaming\\Python\\Python312\\Scripts\\",
+    "fortran.fortls.path": "C:\\Users\\klgno\\AppData\\Roaming\\Python\\Python312\\Scripts\\",
+    "fortran.linter.compilerPath": "C:\\Program Files\\gcc\\bin\\"
 }
