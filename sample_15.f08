@@ -10,24 +10,24 @@ if (v100>0) write (*,*) 'Nominal $100:', v100
 i=v50
 v50=v50/nom50
 v20=i-v50*nom50
-if (v50>0) write (*,*) 'Nominal $50:', v50
+if (v50>0) write (*,*) 'Nominal  $50:', v50
 i=v20
 v20=v20/nom20
 v10=i-v20*nom20
-if(v20>0) write (*,*) 'Nominal $20:', v20
+if(v20>0) write (*,*) 'Nominal  $20:', v20
 i=v10
 v10=v10/nom10
 v5=i-v10*nom10
-if(v10>0) write (*,*) 'Nominal $10:', v10
+if(v10>0) write (*,*) 'Nominal  $10:', v10
 i=v5
 v5=v5/nom5
 v2=i-v5*nom5
-if(v5>0) write (*,*) 'Nominal $5:', v5
+if(v5>0) write (*,*) 'Nominal   $5:', v5
 i=v2
 v2=v2/nom2
 v1=i-v2*nom2
-if(v2>0) write (*,*) 'Nominal $2:', v2
+if(v2>0) write (*,*) 'Nominal   $2:', v2
 v1=v1/nom1
-if(v1>0) write (*,*) 'Nominal $1:', v1
-read(*,*)
+if(v1>0) write (*,*) 'Nominal   $1:', v1
+!read(*,*)
 end program smp_15
